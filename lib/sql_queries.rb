@@ -32,8 +32,9 @@ def select_youngest_bear_and_returns_name_and_age
 end
 
 def selects_most_prominent_color_and_returns_with_count
-  "SELECT color, MAX(COUNT(color))
+  "SELECT color, (COUNT(color)
   FROM bears
+  GROUP BY color
   LIMIT 1"
 end
 
